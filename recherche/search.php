@@ -4,6 +4,10 @@
  * @author        Gaël Poupard
  * @link          www.ffoodd.fr
  *
+ * @note Amélioration trouvée sur GeekPress
+ * @see http://www.geekpress.fr/wordpress/astuce/mettre-en-evidence-les-termes-dans-les-resultats-de-recherche-725/
+ * @author Jonathan Buttigieg
+ *
  * En savoir plus : http://codex.wordpress.org/Template_Hierarchy
  *
  * @package       WordPress
@@ -32,24 +36,14 @@ get_header(); ?>
         <p itemprop="description"><?php echo $excerpt; ?></p>
 
         <footer>
-          <?php // Liste des catégories & tags avec un séparateur.
-          $categories_list = get_the_category_list( __( ', ' ) );
-          $tag_list = get_the_tag_list( '', __( ', ' ) );
-          if ( '' != $tag_list ) {
-            echo '<p>'. __('Article rédigé par', 'ffeeeedd') .' <a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" itemprop="author">'. get_the_author() . '</a> '. __('et publié dans', 'ffeeeedd') .' ' . $categories_list . '.<br />'. __('Mots-clés', 'ffeeeedd') .' : ' . $tag_list . '.</p>';
-          } elseif ( '' != $categories_list ) {
-            echo '<p>'. __('Article rédigé par', 'ffeeeedd') .' <a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" itemprop="author">'. get_the_author() . '</a> '. __('et publié dans', 'ffeeeedd') .' ' . $categories_list . '.</p>';
-          } else {
-            echo '<p>'. __('Article rédigé par', 'ffeeeedd') .' <a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" itemprop="author">'. get_the_author() . '</a>.</p>';
-          } ?>
-          <p><?php echo __('Édité le', 'ffeeeedd'); ?> <time class="updated" datetime="<?php the_modified_date( 'Y-m-d' ); ?>" itemprop="dateModified"><?php the_modified_date(); ?></time>.</p>
+          <?php ffeeeedd__meta(); ?>
         </footer>
       </article>
     </li>
     <?php endwhile; ?>
   </ol>
 
-  <?php theme_pagination(); ?>
+  <?php ffeeeedd_pagination(); ?>
 
   <?php else : ?>
   <h2><?php echo __('Aucun article ne répond à votre critère de recherche', 'ffeeeedd'); ?>.</h2>
