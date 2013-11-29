@@ -11,21 +11,21 @@
 // À copier dans functions.php
 
   // Permet d'utiliser la meilleure esperluette disponible dans les titres
-  function esperluette__titre($title) {
+  function esperluette__titre( $title ) {
     $amp = '&amp;';
     $amp2 = '<span class="amp">&amp;</span>';
-    $title = str_replace($amp, $amp2, $title);
+    $title = str_replace( $amp, $amp2, $title );
     return $title;
   }
-  add_filter('the_title', 'esperluette__titre');
+  add_filter( 'the_title', 'esperluette__titre' );
 
   // Permet d'utiliser la meilleure esperluette disponible dans le contenu
-  function esperluette__contenu($content){
+  function esperluette__contenu( $content ){
     $amp = '&amp;';
     $amp2 = '<span class="amp">&amp;</span>';
-    $content = str_replace($amp, $amp2, $content);
+    $content = str_replace( $amp, $amp2, $content );
     return $content;
   }
-  add_filter('the_content', 'esperluette__contenu');
+  add_filter( 'the_content', 'esperluette__contenu' );
 
 ?>
