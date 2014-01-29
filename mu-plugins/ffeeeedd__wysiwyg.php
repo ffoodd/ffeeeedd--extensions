@@ -12,6 +12,24 @@ Version: 29 01 2014
   * @see http://hugobaeta.com
   */
 
+
+
+/* == @section Ajouts d’extensions TinyMCE ====================
+ * @note Vous pouvez ajouter d’autres plugins TinyMCE
+ * @see http://www.tinymce.com/wiki.php/TinyMCE3x:Buttons/controls
+ */
+function ffeeeedd__plugins() {
+  $plugins = array( 'xhtmlxtras' );
+  $plugins_array = array();
+  foreach ( $plugins as $plugin ) {
+    $plugins_array[ $plugin ] = content_url( '/mu-plugins/ffeeeedd__wysiwyg/tinymce_plugins/', __FILE__) . $plugin . '/editor_plugin.js';
+  }
+  return $plugins_array;
+}
+add_filter( 'mce_external_plugins', 'ffeeeedd__plugins' );
+
+
+/* == @section Amélioration du WYSIWYG de base ==================== */
 function ffeeeedd__wysiwyg( $boutons ) {
   $boutons['theme_advanced_blockformats'] = 'p,h2,h3,h4,pre';
   $boutons['theme_advanced_disable'] = 'underline,justifyfull,strikethrough,forecolor,justifyleft,justifycenter,justifyright,media,wp_adv,hr,wp_more,wp_help';
@@ -22,4 +40,3 @@ function ffeeeedd__wysiwyg( $boutons ) {
   return $boutons;
 }
 add_filter('tiny_mce_before_init', 'ffeeeedd__wysiwyg');
-
