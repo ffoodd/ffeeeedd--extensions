@@ -30,5 +30,5 @@
   font-style: italic;
 }
 
-/* À personnaliser selon vos besoins */
+/* À personnaliser selon vos besoins : l’important est de conserver le "Ampersand" avant la pile typographique regulière. */
 body { font: 1.6em/1.2 "Ampersand", Arial, sans-serif; }
