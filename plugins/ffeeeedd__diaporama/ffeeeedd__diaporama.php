@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: ffeeeedd__diaporama
- * Plugin URI: https://github.com/ffoodd/ffeeeedd--extensions/tree/master/plugins
+ * Plugin URI: https://github.com/ffoodd/ffeeeedd--extensions/tree/master/plugins/ffeeeedd__diaporama
  * Description: Ajout et gestion d’un diaporama animé. Il faut inclure la fonction ffeeeedd__diaporama() à l’endroit ou vous voulez voir appareaitre le diaporama.
  * Version: 0.1
  * Author: Gaël Poupard
