@@ -125,7 +125,7 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
           if( $counter > 1 ) {
               wp_enqueue_script(
                 'cycle2',
-                plugins_url( 'js/jquery.cycle2.js', __FILE__ ),
+                plugins_url( 'js/jquery.cycle2.min.js', __FILE__ ),
                 array( 'jquery' ),
                 null,
                 true
