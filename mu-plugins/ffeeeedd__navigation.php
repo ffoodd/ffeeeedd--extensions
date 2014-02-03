@@ -9,10 +9,13 @@
  */
 if (!defined('ABSPATH')) die();
 
-wp_enqueue_script(
-  'superfish',
-  plugins_url( 'js/jquery.ffeeeedd-navigation.min.js', __FILE__ ),
-  array( 'jquery' ),
-  null,
-  true
-);
+function ffeeeedd__navigation() {
+  wp_enqueue_script(
+    'superfish',
+    content_url( 'mu-plugins/ffeeeedd__navigation/js/jquery.ffeeeedd-navigation.min.js', __FILE__ ),
+    array( 'jquery' ),
+    null,
+    true
+  );
+}
+add_action('wp_enqueue_scripts', 'ffeeeedd__navigation');
