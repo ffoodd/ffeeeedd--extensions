@@ -27,17 +27,18 @@ function ffeeeedd__shortcode__onglets( $atts, $content = null ) {
     class="ffeeeedd__onglets">' . do_shortcode( $content ) . '
   </div>';
 }
-add_shortcode( __('tabs', 'ffeeeedd__onglets'), 'ffeeeedd__shortcode__onglets' );
+add_shortcode( 'onglets', 'ffeeeedd__shortcode__onglets' );
 
 function ffeeeedd__shortcode__onglet( $atts, $content = null ) {
   extract( shortcode_atts( array(
-    __('title', 'ffeeeedd__onglets') => __('Missing title', 'ffeeeedd__onglets'),
+    'titre' => 'Titre manquant',
   ), $atts ) );
-  $label = sanitize_html_class( sanitize_title( strtolower( ${ __('title', 'ffeeeedd__onglets') } ) ) );
+  $label = sanitize_html_class( sanitize_title( strtolower( $titre ) ) );
   return '<h3
     data-role="tab"
+    class="inbl h6-like m-reset"
     id="' . esc_attr( $label ) . '-titre"
-    data-controls="' . esc_attr( $label ) . '">' . $title . '
+    data-controls="' . esc_attr( $label ) . '">' . $titre . '
   </h3>
   <div
     data-role="panel"
@@ -47,7 +48,7 @@ function ffeeeedd__shortcode__onglet( $atts, $content = null ) {
       <div class="pa1">' . do_shortcode( $content ) . '</div>
   </div>';
 }
-add_shortcode( __('tab', 'ffeeeedd__onglets'), 'ffeeeedd__shortcode__onglet' );
+add_shortcode( 'onglet', 'ffeeeedd__shortcode__onglet' );
 
 
 /* == @section Injection du javascript ==================== */
