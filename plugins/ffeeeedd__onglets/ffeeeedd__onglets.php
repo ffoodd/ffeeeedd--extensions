@@ -36,10 +36,9 @@ function ffeeeedd__shortcode__onglet( $atts, $content = null ) {
   $label = sanitize_html_class( sanitize_title( strtolower( $titre ) ) );
   return '<h3
     data-role="tab"
-    class="inbl h6-like m-reset"
+    class="inbl h6-like"
     id="' . esc_attr( $label ) . '-titre"
-    data-controls="' . esc_attr( $label ) . '">' . $titre . '
-  </h3>
+    data-controls="' . esc_attr( $label ) . '">' . $titre . '</h3>
   <div
     data-role="panel"
     data-label="' . esc_attr( $label ) . '-titre"

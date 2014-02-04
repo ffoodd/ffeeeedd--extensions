@@ -17,7 +17,7 @@
           $tabs = $el.find('[data-role="tab"]'),
           $panels = $el.find('[data-role="panel"]'),
           // On crée le groupe d’onglets (tablist) puis on lui adjoint les onglets (tab)
-          $nav = $('<div role="tablist">').append( $tabs ).append( '<hr class="action--primary__bottom mt0" />' ),
+          $nav = $('<div role="tablist">').append( $tabs ),
           // On crée un conteneur pour regrouper les onglets
           $bloc = $('<div class="tabpanel">').append( $panels );
 
