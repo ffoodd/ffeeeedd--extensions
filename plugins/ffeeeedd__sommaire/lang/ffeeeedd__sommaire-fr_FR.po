@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ffeeeedd__sommaire\n"
+"POT-Creation-Date: 2014-02-05 16:56+0100\n"
+"PO-Revision-Date: 2014-02-05 16:56+0100\n"
+"Last-Translator: Gaël Poupard <gael@1-ter-net.com>\n"
+"Language-Team: Gaël Poupard\n"
+"Language: english\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_x;_e\n"
+"X-Poedit-Basepath: D:\\clients\\GitHub\\ffeeeedd--extensions\\plugins"
+"\\ffeeeedd__sommaire\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: D:\\clients\\GitHub\\ffeeeedd--extensions\\plugins"
+"\\ffeeeedd__sommaire\n"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__sommaire/ffeeeedd__sommaire.php:31
+msgid "Back to the table of content"
+msgstr "Retour au sommaire"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__sommaire/ffeeeedd__sommaire.php:61
+msgid "Comments"
+msgstr "Commentaires"
+
+#~ msgid "Slideshow"
+#~ msgstr "Diaporama"
+
+#~ msgid "Slide"
+#~ msgstr "Image"
+
+#~ msgid "All slides"
+#~ msgstr "Toutes les images"
+
+#~ msgid "View slide"
+#~ msgstr "Voir l’image"
+
+#~ msgid "Add slide"
+#~ msgstr "Ajouter une image"
+
+#~ msgid "New slide"
+#~ msgstr "Nouvelle image"
+
+#~ msgid "Edit slide"
+#~ msgstr "Modifier l’image"
+
+#~ msgid "Update slide"
+#~ msgstr "Ajouter une image"
+
+#~ msgid "Search slides"
+#~ msgstr "Rechercher parmi les images"
+
+#~ msgid "No slide found"
+#~ msgstr "Aucune image trouvée"
+
+#~ msgid "No slide in trash"
+#~ msgstr "Aucune image dans la corbeille"
+
+#~ msgid "Read more"
+#~ msgstr "En savoir plus"
+
+#~ msgid "about"
+#~ msgstr "à propos de"
+
+#~ msgid "Previous"
+#~ msgstr "Précédent"
+
+#~ msgid "Pause"
+#~ msgstr "Pause"
+
+#~ msgid "Play"
+#~ msgstr "Lecture"
+
+#~ msgid "Next"
+#~ msgstr "Suivant"
+
+#~ msgid "Permalink to the post"
+#~ msgstr "Consulter "

@@ -7,8 +7,8 @@ Mode d'emploi
 -------------
 
 Cette extension ajoute deux «shortcodes» :
-* [onglets]…[/onglets]
-* [onglet titre="…"]…[/onglet]
+* `[onglets]`…`[/onglets]`
+* `[onglet titre="…"]`…`[/onglet]`
 
 Le premier est indispensable pour générer la boîte à onglets : c’est sur cet élément que le javascript est intialisé. Le second permet de définir autant d’onglets que nécessaire, en précisant un titre.
 

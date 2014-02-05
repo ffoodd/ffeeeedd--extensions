@@ -91,7 +91,7 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
     if( $diaporamas->have_posts() ) {
       $counter = 0; ?>
       <section class="ffeeeedd--diaporamas" aria-labelledby="section-diaporama">
-        <span class="visually-hidden" id="section-diaporama">Diaporama</span>
+        <span class="visually-hidden" id="section-diaporama"><?php _e( 'Slideshow', 'ffeeeedd__diaporama' ); ?></span>
         <div class="cycle-slideshow"
              data-cycle-slides="> article"
              data-cycle-fx="scrollHorz"

@@ -7,8 +7,8 @@ Mode d'emploi
 -------------
 
 Cette extension ajoute deux «shortcodes» :
-* [accordeons]…[/accordeons]
-* [accordeon titre="…"]…[/accordeon]
+* `[accordeons]`…`[/accordeons]`
+* `[accordeon titre="…"]`…`[/accordeon]`
 
 Le premier est indispensable pour regrouper les accordéons. Le second permet de définir autant d’accordéons que nécessaire, en précisant un titre pour chacun.
 
