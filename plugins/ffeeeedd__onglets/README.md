@@ -1,7 +1,7 @@
 ffeeeedd__onglets
 ===================
 
-Une extension pour ffeeeedd--sass basée sur [jQuery Simple Tabs](https://github.com/bluety/simpleTabs), pour créer une boîte à onglets facilement. Le script référence a été largement modifié, afin de prendre en compte les structures ARIA recommandées et être accessible au clavier.
+Une extension pour ffeeeedd--sass basée sur [jQuery Simple Tabs](https://github.com/bluety/simpleTabs), pour créer une boîte à onglets facilement. Le script référence a été largement modifié, afin de prendre en compte les structures ARIA recommandées, rendre le contenu correctement sans javascript et être accessible au clavier.
 
 Mode d'emploi
 -------------
