@@ -47,7 +47,7 @@ function ffeeeedd__sommaire__patron( $matches ) {
 function ffeeeedd__sommaire__ancres( $content ) {
   if( is_singular( 'post' ) ) {
     global $post;
-    $pattern = "/<h([2])(.*?)>(.*?)<\/h([2])>/i";
+    $pattern = "/<h([3])(.*?)>(.*?)<\/h([3])>/i";
     $content = preg_replace_callback( $pattern, 'ffeeeedd__sommaire__patron', $content );
     return $content;
   } else {
@@ -63,7 +63,7 @@ function ffeeeedd__sommaire( $echo = false ) {
   $obj = '<ol id="toc">';
   $original_content = $post->post_content;
   // On récupère les titres
-  $patt = "/<h2(.*?)>(.*?)<\/h2>/i";
+  $patt = "/<h3(.*?)>(.*?)<\/h3>/i";
   preg_match_all( $patt, $original_content, $results );
   // On génère les liens
   foreach( $results[2] as $k=>$r ) {
