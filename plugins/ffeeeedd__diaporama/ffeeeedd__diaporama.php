@@ -9,6 +9,19 @@
  */
 if (!defined('ABSPATH')) die();
 
+/* ----------------------------- */
+/* Sommaire */
+/* ----------------------------- */
+/*
+  == Chargement des fichiers de traduction
+  == Création du type d’articles
+  == Gestion des images
+  == Création du contexte d’affichage
+    -- Paramétrage de la boucle
+    -- Démarrage de la boucle
+*/
+
+
 /* == @section Chargement des fichiers de traduction ==================== */
 function ffeeeedd__diaporama_init() {
   load_plugin_textdomain( 'ffeeeedd__diaporama', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );

@@ -9,6 +9,14 @@
  */
 if (!defined('ABSPATH')) die();
 
+/* ----------------------------- */
+/* Sommaire */
+/* ----------------------------- */
+/*
+  == Création des shortcodes
+  == Injection du javascript
+*/
+
 
 /* == @section Création des shortcodes ==================== */
 /**

@@ -12,6 +12,13 @@ Version: 29 01 2014
   * @see http://hugobaeta.com
   */
 
+/* ----------------------------- */
+/* Sommaire */
+/* ----------------------------- */
+/*
+  == Ajouts d’extensions TinyMCE
+  == Amélioration du WYSIWYG de base
+*/
 
 
 /* == @section Ajouts d’extensions TinyMCE ====================

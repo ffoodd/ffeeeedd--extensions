@@ -9,13 +9,18 @@
  */
 if (!defined('ABSPATH')) die();
 
-
-/**
-  * @author Willy Bahuaud
-  * @see https://twitter.com/willybahuaud
-  * @see http://wabeo.fr/blog/sommaire-article-wordpress/
-  * @note Légèrement modifiée par mes soins, afin d’inclure un smoothscroll, des URLs absolues ainsi qu’un lien de retour en haut de page.
-  */
+/* ----------------------------- */
+/* Sommaire */
+/* ----------------------------- */
+/*
+  == Chargement des fichiers de traduction
+  == Création du patron
+  == Ajout d’un filtre sur le contenu
+  == Création du sommaire
+  == Création d’un shortcode pour afficher le sommaire
+  == Permet l'utilisation de shortcodes dans les sidebars
+  == Injection du javascript
+*/
 
 
 /* == @section Chargement des fichiers de traduction ==================== */
@@ -26,6 +31,12 @@ add_action( 'plugins_loaded', 'ffeeeedd__sommaire_init' );
 
 
 /* == @section Création du patron ==================== */
+/**
+  * @author Willy Bahuaud
+  * @see https://twitter.com/willybahuaud
+  * @see http://wabeo.fr/blog/sommaire-article-wordpress/
+  * @note Légèrement modifiée par mes soins, afin d’inclure un smoothscroll, des URLs absolues ainsi qu’un lien de retour en haut de page.
+  */
 function ffeeeedd__sommaire__patron( $matches ) {
   global $post;
   return '<h' . $matches[1] . $matches[2] . ' id="' .sanitize_title( $matches[3] ) . '">' . $matches[3] . ' <a href="' . get_permalink( $post->ID ) . '#toc" class="scroll print-hidden" title="' . __( 'Back to the table of content', 'ffeeeedd__sommaire' ) . '">⤴</a></h' . $matches[4] . '>';
