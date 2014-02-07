@@ -6,17 +6,15 @@ Version: 28 01 2014
 */
 
 /**
-  * @note : Le contenu est filtré pour remplacer le html généré pour les caption par du html5 sémantique. Astuce trouvée sur Reverie.
-  * @author : Zhen Huang
-  * @see : http://themefortress.com/reverie/
-  * @see : https://github.com/milohuang/reverie/blob/master/lib/clean.php#LC151
-  * @note : On y ajoute les microdonnées qui vont bien.
-  * @author : Joost Kiens ( @joostkiens )
-  * @see : https://gist.github.com/JoostKiens/4477366
-  * @note : Et j'y ajoute les roles et attributs Aria nécessaires
-  * @see : http://www.kloh.ch/craw2013-html5-aria-et-accessibilite-web-479
+  * @author Zhen Huang
+  * @see http://themefortress.com/reverie/
+  * @see https://github.com/milohuang/reverie/blob/master/lib/clean.php#LC151
+  * @note On y ajoute les microdonnées qui vont bien.
+  * @author Joost Kiens ( @joostkiens )
+  * @see https://gist.github.com/JoostKiens/4477366
+  * @note Et j’y ajoute les rôles et attributs Aria nécessaires
+  * @see http://www.kloh.ch/craw2013-html5-aria-et-accessibilite-web-479
   */
-
   add_filter( 'img_caption_shortcode', 'ffeeeedd__caption', 10, 3 );
   function ffeeeedd__caption( $output, $attr, $content ) {
     if ( is_feed() ) {

@@ -6,7 +6,7 @@ Version: 29 01 2014
 */
 
 /**
-  * @note : Le WYSIWYG est personnalisé pour éviter les erreurs de saisie de contenu inaccessible ou contre-productif.
+  * @note Le WYSIWYG est personnalisé pour éviter les erreurs de saisie de contenu inaccessible ou contre-productif.
   * @see see http://wiki.moxiecode.com/index.php/TinyMCE:Control_reference
   * @author Hugo Baeta
   * @see http://hugobaeta.com

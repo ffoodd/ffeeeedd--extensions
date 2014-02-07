@@ -25,7 +25,10 @@ function ffeeeedd__partage_init() {
 add_action( 'plugins_loaded', 'ffeeeedd__partage_init' );
 
 
-/* == @section Création de la fonction ==================== */
+/* == @section Création de la fonction ====================
+ * @note Si vous voulez ajouter d’autres réseaux sociaux :
+ * @see http://www.crea-fr.com/blog/15-liens-de-partage-pour-les-reseaux-sociaux/
+ */
 function ffeeeedd__partage() {
   global $post;
   if( is_singular( 'post' ) ) {
