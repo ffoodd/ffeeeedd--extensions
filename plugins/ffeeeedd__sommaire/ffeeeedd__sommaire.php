@@ -39,7 +39,7 @@ add_action( 'plugins_loaded', 'ffeeeedd__sommaire_init' );
   */
 function ffeeeedd__sommaire__patron( $matches ) {
   global $post;
-  return '<h' . $matches[1] . $matches[2] . ' id="' .sanitize_title( $matches[3] ) . '">' . $matches[3] . ' <a href="' . get_permalink( $post->ID ) . '#toc" class="scroll print-hidden" title="' . __( 'Back to the table of content', 'ffeeeedd__sommaire' ) . '">⤴</a></h' . $matches[4] . '>';
+  return '<h' . $matches[1] . $matches[2] . ' id="' .sanitize_title( $matches[3] ) . '">' . $matches[3] . ' <a href="' . get_permalink( $post->ID ) . '#toc" class="scroll print-hidden" title="' . __( 'Back to the table of content', 'ffeeeedd__sommaire' ) . '"><span aria-hidden="true">⤴</span></a></h' . $matches[4] . '>';
 }
 
 

@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) die();
 
 /* == @section Chargement des fichiers de traduction ==================== */
 function ffeeeedd__notes_init() {
-  load_plugin_textdomain( 'ffeeeedd__notes', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+  load_plugin_textdomain( 'ffeeeedd--notes', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
 }
 add_action( 'plugins_loaded', 'ffeeeedd__notes_init' );
 
@@ -38,7 +38,7 @@ function ffeeeedd__notes() {
       $chiffre = 0;
       foreach( $notes[3] as $k=>$r  ) {
         $chiffre++;
-        $liste .= '<li role="note" id="note-' . esc_attr( $chiffre ) . '">' . $r . '<a class="scroll print-hidden" href="' . get_permalink( $post->ID ) . '#lien-' . esc_attr( $chiffre ) . '" title="' . __( 'Resume', 'ffeeeedd--notes' ) . '"> [&rarr;]</a></li>';
+        $liste .= '<li role="note" id="note-' . esc_attr( $chiffre ) . '">' . $r . '&nbsp;<a class="scroll print-hidden" href="' . get_permalink( $post->ID ) . '#lien-' . esc_attr( $chiffre ) . '" title="' . __( 'Resume', 'ffeeeedd--notes' ) . '"><span aria-hidden="true">[&rarr;]</span></a></li>';
       }
       $liste .= '</ol>';
       echo $liste;
