@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ffeeeedd__partage\n"
-"POT-Creation-Date: 2014-02-06 17:17+0100\n"
-"PO-Revision-Date: 2014-02-06 17:17+0100\n"
+"Project-Id-Version: ffeeeedd__notes\n"
+"POT-Creation-Date: 2014-02-07 10:42+0100\n"
+"PO-Revision-Date: 2014-02-07 10:42+0100\n"
 "Last-Translator: Gaël Poupard <gael@1-ter-net.com>\n"
 "Language-Team: Gaël Poupard\n"
 "Language: english\n"
@@ -12,32 +12,21 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_x;_e\n"
 "X-Poedit-Basepath: D:\\clients\\GitHub\\ffeeeedd--extensions\\plugins"
-"\\ffeeeedd__partage\n"
+"\\ffeeeedd__notes\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: D:\\clients\\GitHub\\ffeeeedd--extensions\\plugins"
-"\\ffeeeedd__partage\n"
+"\\ffeeeedd__notes\n"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__partage/ffeeeedd__partage.php:28
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__partage/ffeeeedd__partage.php:31
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__partage/ffeeeedd__partage.php:34
-msgid "Share on"
-msgstr "Partager sur"
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__notes/ffeeeedd__notes.php:41
+msgid "Resume"
+msgstr "Reprendre la lecture"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__partage/ffeeeedd__partage.php:37
-msgid "Email to a friend"
-msgstr "Envoyer à un ami"
+#~ msgid "Back to the table of content"
+#~ msgstr "Retour au sommaire"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__partage/ffeeeedd__partage.php:42
-msgid "Print this post"
-msgstr "Imprimer cet article"
-
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__partage/ffeeeedd__partage.php:43
-msgid ""
-"In order to print this post, please use the following keyboard shortcut: "
-"<kbd>Ctrl + P</kbd>"
-msgstr ""
-"Pour imprimer cet article, utilisez le raccourci clavier <kbd>Ctrl + P</kbd>."
+#~ msgid "Comments"
+#~ msgstr "Commentaires"
 
 #~ msgid "Slideshow"
 #~ msgstr "Diaporama"
@@ -89,3 +78,6 @@ msgstr ""
 
 #~ msgid "Next"
 #~ msgstr "Suivant"
+
+#~ msgid "Permalink to the post"
+#~ msgstr "Consulter "

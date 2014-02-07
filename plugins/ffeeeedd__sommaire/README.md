@@ -10,10 +10,20 @@ Une fois l’extension installée, vous pouvez l’utiliser de deux façons :
 1 . Ajouter dans `single.php` ou dans `sidebar.php` la fonction `ffeeeedd__sommaire();`;
 2 . Créer un widget et inclure le shortcode `[sommaire]`. Vous pouvez également inclure le shortcode dans le contenu de l’article, mais l’intérêt semble limité.
 
+*Si vous utilisez la première méthode, pensez à vérifier l’existence de la fonction afin de ne pas générer d’erreur :*
+
+```php
+if( function_exists( 'ffeeeedd__sommaire' ) ) {
+  ffeeeedd__sommaire();
+}
+```
+
 Personnalisation
 ----------------
 
 Un seul fichier javascript est utilisé, ne dépendant pas de jQuery. Vous pouvez y modifier la vitesse d’éxécution de l’animation au scroll. Vous pouvez aussi y personnaliser le sélecteur utilisé pour déclencher l’animation, mais il faudra alors penser à le modifier en conséquence dans le `PHP` également (lignes 31 et 59, en l’état actuel).
+
+*Attention : ce fichier peut également être utilisé par l’extension `ffeeeedd__notes`. Les réglages que vous modifierez auront donc un impact sur cette autre extension.*
 
 Dans le fichier `PHP`, vous pouvez également modifier le niveau de titre utilisé pour générer le sommaire (ligne 40). Il s’agit d’une expression régulière, donc si vous vous y connaissez vous pouvez même la personnaliser afin d’obtenir un sommaire à plusieurs niveaux, indenté.
 

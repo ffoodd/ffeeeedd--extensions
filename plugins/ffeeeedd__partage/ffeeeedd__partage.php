@@ -28,23 +28,26 @@ add_action( 'plugins_loaded', 'ffeeeedd__partage_init' );
 /* == @section Création de la fonction ==================== */
 function ffeeeedd__partage() {
   global $post;
-  if( is_single() ) {
+  if( is_singular( 'post' ) ) {
     $link = esc_url( get_permalink() );
     echo '
     <ul class="print-hidden">
       <li>
         <a href="http://twitter.com/home?status=' . $link . '"
           target="_blank"
+          title="' . __( 'New window', 'ffeeeedd--partage' ) . '"
           rel="nofollow">' . __( 'Share on', 'ffeeeedd--partage' ) . ' Twitter</a>
       </li>
       <li>
         <a href="http://www.facebook.com/sharer.php?u=' . $link . '&t=' . esc_attr( $post->post_title ) . '"
           target="_blank"
+          title="' . __( 'New window', 'ffeeeedd--partage' ) . '"
           rel="nofollow">' . __( 'Share on', 'ffeeeedd--partage' ) . ' Facebook</a>
       </li>
       <li>
         <a href="https://plus.google.com/share?url=' . $link . '"
           target="_blank"
+          title="' . __( 'New window', 'ffeeeedd--partage' ) . '"
           rel="nofollow">' . __( 'Share on', 'ffeeeedd--partage' ) . ' Google+</a>
       </li>
       <li>
@@ -55,8 +58,7 @@ function ffeeeedd__partage() {
         <a class="js-visible"
           href="javascript:window.print()"
           target="_blank"
-          rel="nofollow"
-          title="' . __( 'Print this post', 'ffeeeedd--partage' ) . '">' . __( 'Print this post', 'ffeeeedd--partage' ) . '</a>
+          rel="nofollow">' . __( 'Print this post', 'ffeeeedd--partage' ) . '</a>
           <strong class="js-hidden">' . __( 'In order to print this post, please use the following keyboard shortcut: <kbd>Ctrl + P</kbd>', 'ffeeeedd--partage' ) . '</strong>
       </li>
     </ul>';

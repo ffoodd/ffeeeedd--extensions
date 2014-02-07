@@ -60,7 +60,7 @@ add_filter( 'the_content', 'ffeeeedd__sommaire__ancres', 12 );
 /* == @section Création du sommaire ==================== */
 function ffeeeedd__sommaire( $echo = false ) {
   global $post;
-  $obj = '<ol id="toc">';
+  $obj = '<ol id="toc" class="print-hidden">';
   $original_content = $post->post_content;
   // On récupère les titres
   $patt = "/<h3(.*?)>(.*?)<\/h3>/i";
@@ -88,14 +88,17 @@ add_filter('widget_text', 'do_shortcode');
 
 /* == @section Injection du javascript ==================== */
 function ffeeeedd__sommaire__js() {
-  if( is_singular( 'post' ) ) {
-    wp_enqueue_script(
-      'ffeeeedd-sommaire',
-      plugins_url( 'js/ffeeeedd-sommaire.min.js', __FILE__ ),
+  if( wp_script_is( 'ffeeeedd-scroll', 'enqueued' ) ) {
+    return;
+  } elseif( is_singular( 'post' ) ) {
+    wp_register_script(
+      'ffeeeedd-scroll',
+      plugins_url( 'js/ffeeeedd-scroll.min.js', __FILE__ ),
       array(),
       null,
       true
     );
+    wp_enqueue_script( 'ffeeeedd-scroll' );
   }
 }
 add_action( 'wp_enqueue_scripts', 'ffeeeedd__sommaire__js' );
