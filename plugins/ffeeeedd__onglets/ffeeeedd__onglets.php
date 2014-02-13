@@ -7,7 +7,7 @@
  * Author: Gaël Poupard
  * Author URI: http://www.ffoodd.fr
  */
-if (!defined('ABSPATH')) die();
+if ( !defined( 'ABSPATH' ) ) die();
 
 /* ----------------------------- */
 /* Sommaire */

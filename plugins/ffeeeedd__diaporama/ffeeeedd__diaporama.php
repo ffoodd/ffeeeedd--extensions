@@ -7,7 +7,7 @@
  * Author: Gaël Poupard
  * Author URI: http://www.ffoodd.fr
  */
-if (!defined('ABSPATH')) die();
+if ( !defined( 'ABSPATH' ) ) die();
 
 /* ----------------------------- */
 /* Sommaire */
@@ -15,6 +15,7 @@ if (!defined('ABSPATH')) die();
 /*
   == Chargement des fichiers de traduction
   == Création du type d’articles
+    -- Modification des permaliens à l’activation / désactivation
   == Gestion des images
   == Création du contexte d’affichage
     -- Paramétrage de la boucle
@@ -24,7 +25,7 @@ if (!defined('ABSPATH')) die();
 
 /* == @section Chargement des fichiers de traduction ==================== */
 function ffeeeedd__diaporama_init() {
-  load_plugin_textdomain( 'ffeeeedd__diaporama', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+  load_plugin_textdomain( 'ffeeeedd--diaporama', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
 }
 add_action( 'plugins_loaded', 'ffeeeedd__diaporama_init' );
 
@@ -36,20 +37,21 @@ add_action( 'plugins_loaded', 'ffeeeedd__diaporama_init' );
   */
 function ffeeeedd__diaporamas() {
   $labels = array(
-    'name'                => _x( 'Slideshow', 'Post Type General Name', 'ffeeeedd__diaporama' ),
-    'singular_name'       => _x( 'Slide', 'Post Type Singular Name', 'ffeeeedd__diaporama' ),
-    'menu_name'           => __( 'Slideshow', 'ffeeeedd__diaporama' ),
-    'all_items'           => __( 'All slides', 'ffeeeedd__diaporama' ),
-    'view_item'           => __( 'View slide', 'ffeeeedd__diaporama' ),
-    'add_new_item'        => __( 'Add slide', 'ffeeeedd__diaporama' ),
-    'add_new'             => __( 'New slide', 'ffeeeedd__diaporama' ),
-    'edit_item'           => __( 'Edit slide', 'ffeeeedd__diaporama' ),
-    'update_item'         => __( 'Update slide', 'ffeeeedd__diaporama' ),
-    'search_items'        => __( 'Search slides', 'ffeeeedd__diaporama' ),
-    'not_found'           => __( 'No slide found', 'ffeeeedd__diaporama' ),
-    'not_found_in_trash'  => __( 'No slide in trash', 'ffeeeedd__diaporama' )
+    'name'                => __( 'Slides', 'ffeeeedd--diaporama' ),
+    'singular_name'       => __( 'Slide', 'ffeeeedd--diaporama' ),
+    'menu_name'           => __( 'Slides', 'ffeeeedd--diaporama' ),
+    'all_items'           => __( 'All slides', 'ffeeeedd--diaporama' ),
+    'view_item'           => __( 'View slide', 'ffeeeedd--diaporama' ),
+    'add_new_item'        => __( 'Add slide', 'ffeeeedd--diaporama' ),
+    'add_new'             => __( 'New slide', 'ffeeeedd--diaporama' ),
+    'edit_item'           => __( 'Edit slide', 'ffeeeedd--diaporama' ),
+    'update_item'         => __( 'Update slide', 'ffeeeedd--diaporama' ),
+    'search_items'        => __( 'Search slides', 'ffeeeedd--diaporama' ),
+    'not_found'           => __( 'No slide found', 'ffeeeedd--diaporama' ),
+    'not_found_in_trash'  => __( 'No slide in trash', 'ffeeeedd--diaporama' )
   );
   $args = array(
+    'label'               => __( 'Slides', 'ffeeeedd--diaporama' ),
     'labels'              => $labels,
     'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions' ),
     'hierarchical'        => false,
@@ -64,11 +66,22 @@ function ffeeeedd__diaporamas() {
     'has_archive'         => false,
     'exclude_from_search' => true,
     'publicly_queryable'  => true,
-    'capability_type'     => 'post'
+    'capability_type'     => 'post',
+    'rewrite' => array( 'slug' => __( 'slides', 'ffeeeedd--diaporama' ) ),
   );
   register_post_type( 'ffeeeedd__diaporamas', $args );
 }
 add_action( 'init', 'ffeeeedd__diaporamas', 0 );
+
+/* -- @subsection Modification des permaliens à l’activation / désactivation -------------------- */
+/**
+  * @see http://codex.wordpress.org/Function_Reference/register_post_type#Flushing_Rewrite_on_Activation
+  */
+function ffeeeedd__diaporamas_rewrite__flush() {
+    ffeeeedd__diaporamas();
+    flush_rewrite_rules();
+}
+register_activation_hook( __FILE__, 'ffeeeedd__diaporamas_rewrite__flush' );
 
 
 /* == @section Gestion des images ==================== */
@@ -104,7 +117,7 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
     if( $diaporamas->have_posts() ) {
       $counter = 0; ?>
       <section class="ffeeeedd--diaporamas" aria-labelledby="section-diaporama">
-        <span class="visually-hidden" id="section-diaporama"><?php _e( 'Slideshow', 'ffeeeedd__diaporama' ); ?></span>
+        <span class="visually-hidden" id="section-diaporama"><?php _e( 'Slideshow', 'ffeeeedd--diaporama' ); ?></span>
         <div class="cycle-slideshow"
              data-cycle-slides="> article"
              data-cycle-fx="scrollHorz"
@@ -124,9 +137,9 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
                 <p class="wp-caption-text entry-title h3-like"><?php the_title(); ?></p>
                 <p class="wp-caption-text"><?php echo get_the_content(); ?></p>
                 <a href="<?php the_permalink(); ?>">
-                  <?php _e( 'Read more', 'ffeeeedd__diaporama' ); ?>
+                  <?php _e( 'Read more', 'ffeeeedd--diaporama' ); ?>
                   <span class="visually-hidden">
-                    <?php _e( 'about', 'ffeeeedd__diaporama' ); ?> «<?php the_title(); ?>»
+                    <?php _e( 'about', 'ffeeeedd--diaporama' ); ?> «<?php the_title(); ?>»
                   </span>
                 </a>
               </aside>
@@ -146,33 +159,33 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
           <div class="ffeeeedd--controles js-visible">
             <button data-cycle-cmd="prev"
                     data-cycle-context=".cycle-slideshow"
-                    title="<?php _e( 'Previous', 'ffeeeedd__diaporama' ); ?>">
+                    title="<?php _e( 'Previous', 'ffeeeedd--diaporama' ); ?>">
               <span class="visually-hidden">
-                <?php _e( 'Previous', 'ffeeeedd__diaporama' ); ?>
+                <?php _e( 'Previous', 'ffeeeedd--diaporama' ); ?>
               </span>
               <span aria-hidden="true">&lt;</span>
             </button>
             <button data-cycle-cmd="pause"
                     data-cycle-context=".cycle-slideshow"
-                    title="<?php _e( 'Pause', 'ffeeeedd__diaporama' ); ?>">
+                    title="<?php _e( 'Pause', 'ffeeeedd--diaporama' ); ?>">
               <span class="visually-hidden">
-                <?php _e( 'Pause', 'ffeeeedd__diaporama' ); ?>
+                <?php _e( 'Pause', 'ffeeeedd--diaporama' ); ?>
               </span>
               <span aria-hidden="true">&#124;&#124;</span>
             </button>
             <button data-cycle-cmd="resume"
                     data-cycle-context=".cycle-slideshow"
-                    title="<?php _e( 'Play', 'ffeeeedd__diaporama' ); ?>">
+                    title="<?php _e( 'Play', 'ffeeeedd--diaporama' ); ?>">
               <span class="visually-hidden">
-                <?php _e( 'Play', 'ffeeeedd__diaporama' ); ?>
+                <?php _e( 'Play', 'ffeeeedd--diaporama' ); ?>
               </span>
               <span aria-hidden="true">&#9658;</span>
             </button>
             <button data-cycle-cmd="next"
                     data-cycle-context=".cycle-slideshow"
-                    title="<?php _e( 'Next', 'ffeeeedd__diaporama' ); ?>">
+                    title="<?php _e( 'Next', 'ffeeeedd--diaporama' ); ?>">
               <span class="visually-hidden">
-                <?php _e( 'Next', 'ffeeeedd__diaporama' ); ?>
+                <?php _e( 'Next', 'ffeeeedd--diaporama' ); ?>
               </span>
               <span aria-hidden="true">&gt;</span>
             </button>

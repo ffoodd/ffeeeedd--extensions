@@ -1,0 +1,104 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ffeeeedd--diaporama\n"
+"POT-Creation-Date: 2014-02-13 14:48+0100\n"
+"PO-Revision-Date: 2014-02-13 14:51+0100\n"
+"Last-Translator: Gaël Poupard <gael@1-ter-net.com>\n"
+"Language-Team: Gaël Poupard\n"
+"Language: english\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_x;_e\n"
+"X-Poedit-Basepath: D:\\clients\\GitHub\\ffeeeedd--extensions\\plugins"
+"\\ffeeeedd__diaporama\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: D:\\clients\\GitHub\\ffeeeedd--extensions\\plugins"
+"\\ffeeeedd__diaporama\n"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:39
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:41
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:53
+msgid "Slides"
+msgstr "Diaporamas"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:40
+msgid "Slide"
+msgstr "Diaporama"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:42
+msgid "All slides"
+msgstr "Tous les diaporamas"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:43
+msgid "View slide"
+msgstr "Voir le diaporama"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:44
+msgid "Add slide"
+msgstr "Ajouter un diaporama"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:45
+msgid "New slide"
+msgstr "Nouveau diaporama"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:46
+msgid "Edit slide"
+msgstr "Modifier le diaporama"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:47
+msgid "Update slide"
+msgstr "Ajouter un diaporama"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:48
+msgid "Search slides"
+msgstr "Rechercher parmi les diaporamas"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:49
+msgid "No slide found"
+msgstr "Aucune diaporama trouvé"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:50
+msgid "No slide in trash"
+msgstr "Aucun diaporama dans la corbeille"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:69
+msgid "slides"
+msgstr "diaporamas"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:109
+msgid "Slideshow"
+msgstr "Diaporamas"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:129
+msgid "Read more"
+msgstr "En savoir plus"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:131
+msgid "about"
+msgstr "à propos de"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:151
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:153
+msgid "Previous"
+msgstr "Précédent"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:159
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:161
+msgid "Pause"
+msgstr "Pause"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:167
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:169
+msgid "Play"
+msgstr "Lecture"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:175
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:177
+msgid "Next"
+msgstr "Suivant"
+
+#~ msgid "Permalink to the post"
+#~ msgstr "Consulter "
