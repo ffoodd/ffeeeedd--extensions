@@ -23,5 +23,5 @@ De plus, l’intitulé utilisé pour la ré-écriture des URLs est personnalisab
 
 Une note sur l’utilisation de cette extension : aucun `CSS` n’est ajouté via ce plugin, mais un fichier `.scss` basique est disponible dans le thème enfant «ffeeeedd--sass», dans le dossier `sass/partials/vendors`. Vous pouvez le compiler en CSS natif ou l’importer dans votre projet sass si vous ne désirez pas utiliser ffeeeedd--sass `:-)`.
 
-Ce projet est sous licence [MIT](http://opensource.org/licenses/MIT "The MIT licence") et [CC BY 3.0 FR] (http://creativecommons.org/licenses/by/3.0/fr/ "Explications de la licence").
+Ce projet est sous licence [MIT](http://opensource.org/licenses/MIT "The MIT licence") et [CC BY 3.0 FR](http://creativecommons.org/licenses/by/3.0/fr/ "Explications de la licence").
 *Copyright (c) 2013 Gaël Poupard*
