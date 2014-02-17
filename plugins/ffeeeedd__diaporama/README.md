@@ -3,6 +3,9 @@ ffeeeedd__diaporama
 
 Une extension pour ffeeeedd--sass basée sur [Cycle2](http://jquery.malsup.com/cycle2/), pour créer un diaporama animé facilement.
 
+Référence(s) utile(s) :
+* [Notice AcceDe Web](http://wiki.accede-web.com/notices/interfaces-riches-javascript/carrousels-slideshows)
+
 Mode d'emploi
 -------------
 

@@ -5,6 +5,9 @@ Une extension pour ffeeeedd--sass basée sur [Superfish](https://github.com/joel
 
 Il gère très bien la navigation au survol et au clavier, et se dégrade correctement en l’absence de javascript.
 
+Référence(s) utile(s) :
+* [Notice AcceDe Web](http://wiki.accede-web.com/notices/interfaces-riches-javascript/menus-deroulants)
+
 Mode d'emploi
 -------------
 

@@ -39,8 +39,9 @@ function ffeeeedd__shortcode__onglet( $atts, $content = null ) {
   return '<h3
     data-role="tab"
     class="inbl h6-like"
-    id="' . esc_attr( $label ) . '-titre"
-    data-controls="' . esc_attr( $label ) . '">' . $titre . '</h3>
+    id="' . esc_attr( $label ) . '-titre">
+      <a href="#' . esc_attr( $label ) . '">' . $titre . '</a>
+    </h3>
   <div
     data-role="panel"
     data-label="' . esc_attr( $label ) . '-titre"

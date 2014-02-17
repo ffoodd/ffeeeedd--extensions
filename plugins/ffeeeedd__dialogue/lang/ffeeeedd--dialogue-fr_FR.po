@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ffeeeedd--dialogue\n"
+"POT-Creation-Date: 2014-02-17 09:50+0100\n"
+"PO-Revision-Date: 2014-02-17 09:50+0100\n"
+"Last-Translator: Gaël Poupard <gael@1-ter-net.com>\n"
+"Language-Team: Gaël Poupard\n"
+"Language: english\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_x;_e\n"
+"X-Poedit-Basepath: D:\\clients\\GitHub\\ffeeeedd--extensions\\plugins"
+"\\ffeeeedd__dialogue\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: D:\\clients\\GitHub\\ffeeeedd--extensions\\plugins"
+"\\ffeeeedd__dialogue\n"
+
+#~ msgid "Slides"
+#~ msgstr "Diaporamas"
+
+#~ msgid "Slide"
+#~ msgstr "Diaporama"
+
+#~ msgid "All slides"
+#~ msgstr "Tous les diaporamas"
+
+#~ msgid "View slide"
+#~ msgstr "Voir le diaporama"
+
+#~ msgid "Add slide"
+#~ msgstr "Ajouter un diaporama"
+
+#~ msgid "New slide"
+#~ msgstr "Nouveau diaporama"
+
+#~ msgid "Edit slide"
+#~ msgstr "Modifier le diaporama"
+
+#~ msgid "Update slide"
+#~ msgstr "Ajouter un diaporama"
+
+#~ msgid "Search slides"
+#~ msgstr "Rechercher parmi les diaporamas"
+
+#~ msgid "No slide found"
+#~ msgstr "Aucune diaporama trouvé"
+
+#~ msgid "No slide in trash"
+#~ msgstr "Aucun diaporama dans la corbeille"
+
+#~ msgid "slides"
+#~ msgstr "diaporamas"
+
+#~ msgid "Slideshow"
+#~ msgstr "Diaporamas"
+
+#~ msgid "Read more"
+#~ msgstr "En savoir plus"
+
+#~ msgid "about"
+#~ msgstr "à propos de"
+
+#~ msgid "Previous"
+#~ msgstr "Précédent"
+
+#~ msgid "Pause"
+#~ msgstr "Pause"
+
+#~ msgid "Play"
+#~ msgstr "Lecture"
+
+#~ msgid "Next"
+#~ msgstr "Suivant"
+
+#~ msgid "Permalink to the post"
+#~ msgstr "Consulter "

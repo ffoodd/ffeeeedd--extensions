@@ -118,44 +118,22 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
       $counter = 0; ?>
       <section class="ffeeeedd--diaporamas" aria-labelledby="section-diaporama">
         <span class="visually-hidden" id="section-diaporama"><?php _e( 'Slideshow', 'ffeeeedd--diaporama' ); ?></span>
-        <div class="cycle-slideshow"
-             data-cycle-slides="> article"
-             data-cycle-fx="scrollHorz"
-             data-cycle-timeout="5000"
-             data-cycle-manual-speed="500"
-             data-cycle-pause-on-hover="true">
 
-            <?php while( $diaporamas->have_posts() ) {
-            $diaporamas->the_post();
-            $counter++; ?>
-            <article class="ffeeeedd--diaporama">
-              <?php if ( has_post_thumbnail() ) {
-                the_post_thumbnail( 'diaporama', array( 'alt' => '') );
-              } ?>
-
-              <aside class="wp-caption w-100 pa1">
-                <p class="wp-caption-text entry-title h3-like"><?php the_title(); ?></p>
-                <p class="wp-caption-text"><?php echo get_the_content(); ?></p>
-                <a href="<?php the_permalink(); ?>">
-                  <?php _e( 'Read more', 'ffeeeedd--diaporama' ); ?>
-                  <span class="visually-hidden">
-                    <?php _e( 'about', 'ffeeeedd--diaporama' ); ?> «<?php the_title(); ?>»
-                  </span>
-                </a>
-              </aside>
-            </article>
-            <?php } wp_reset_postdata(); ?>
-          </div>
-
-          <?php // @note On ne charge le script et les contrôles que s’il y a plus d’un item
-          if( $counter > 1 ) {
-              wp_enqueue_script(
-                'cycle2',
-                plugins_url( 'js/jquery.cycle2.min.js', __FILE__ ),
-                array( 'jquery' ),
-                null,
-                true
-              ); ?>
+        <?php // @note On boucle une première fois pour incrémenter le compteur
+        while( $diaporamas->have_posts() ) {
+          $diaporamas->the_post();
+          $counter++;
+        }
+        wp_reset_postdata();
+        // @note On ne charge le script et les contrôles que s’il y a plus d’un item
+        if( $counter > 1 ) {
+          wp_enqueue_script(
+            'cycle2',
+            plugins_url( 'js/jquery.cycle2.min.js', __FILE__ ),
+            array( 'jquery' ),
+            null,
+            true
+          ); ?>
           <div class="ffeeeedd--controles js-visible">
             <button data-cycle-cmd="prev"
                     data-cycle-context=".cycle-slideshow"
@@ -190,7 +168,35 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
               <span aria-hidden="true">&gt;</span>
             </button>
           </div>
-          <?php } ?>
+        <?php } ?>
+
+        <div class="cycle-slideshow"
+             data-cycle-slides="> article"
+             data-cycle-fx="scrollHorz"
+             data-cycle-timeout="5000"
+             data-cycle-manual-speed="500"
+             data-cycle-pause-on-hover="true">
+
+            <?php while( $diaporamas->have_posts() ) {
+            $diaporamas->the_post(); ?>
+            <article class="ffeeeedd--diaporama">
+              <?php if ( has_post_thumbnail() ) {
+                the_post_thumbnail( 'diaporama', array( 'alt' => '') );
+              } ?>
+
+              <aside class="wp-caption w-100 pa1">
+                <p class="wp-caption-text entry-title h3-like"><?php the_title(); ?></p>
+                <p class="wp-caption-text"><?php echo get_the_content(); ?></p>
+                <a href="<?php the_permalink(); ?>">
+                  <?php _e( 'Read more', 'ffeeeedd--diaporama' ); ?>
+                  <span class="visually-hidden">
+                    <?php _e( 'about', 'ffeeeedd--diaporama' ); ?> «<?php the_title(); ?>»
+                  </span>
+                </a>
+              </aside>
+            </article>
+            <?php } wp_reset_postdata(); ?>
+          </div>
 
         </section><!-- .ffeeeedd--diaporama -->
       <?php } wp_reset_query();
