@@ -27,6 +27,7 @@
           $this.attr({
             'role': 'tab',
             'aria-selected': 'false',
+            'aria-expanded': 'false',
             'tabindex': '-1',
             'aria-controls': $this.find('a').attr('href').replace('#', '')
           });
@@ -39,7 +40,6 @@
           $this = $(this);
           $this.attr({
             'role': 'tabpanel',
-            'aria-expanded': 'false',
             'aria-hidden': 'true',
             'aria-labelledby': $this.data('label')
           });
@@ -56,12 +56,10 @@
           // On désactive tous les accordéons (tab) et leurs contenus (tabpanel)
           $tabs.attr({
             'aria-selected': 'false',
+            'aria-expanded': 'false',
             'tabindex': '-1'
           });
-          $panels.attr({
-            'aria-expanded': 'false',
-            'aria-hidden': 'true'
-          });
+          $panels.attr('aria-hidden', 'true');
         } else {
           var $self = $(this);
           // On récupère l’ID du contenu qu’il contrôle
@@ -70,22 +68,18 @@
           // Puis on désactive tous les accordéons (tab) et leurs contenus (tabpanel)
           $tabs.attr({
             'aria-selected': 'false',
+            'aria-expanded': 'false',
             'tabindex': '-1'
           });
-          $panels.attr({
-            'aria-expanded': 'false',
-            'aria-hidden': 'true'
-          });
+          $panels.attr('aria-hidden', 'true');
 
           // Enfin on active l’accordéon cliqué (tab) ainsi que son contenu associé (tabpanel)
           $self.attr({
             'aria-selected': 'true',
+            'aria-expanded': 'true',
             'tabindex': '0'
           });
-          $($index).attr({
-            'aria-expanded': 'true',
-            'aria-hidden': 'false'
-          });
+          $($index).attr('aria-hidden', 'false');
         }
       });
     });

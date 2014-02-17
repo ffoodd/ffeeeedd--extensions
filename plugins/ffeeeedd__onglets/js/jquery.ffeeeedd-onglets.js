@@ -28,6 +28,7 @@
           $this.attr({
             'role': 'tab',
             'aria-selected': 'false',
+            'aria-expanded': 'false',
             'aria-controls': $this.find('a').attr('href').replace('#', '')
           });
           $this.removeAttr('data-role');
@@ -39,7 +40,6 @@
           $this = $(this);
           $this.attr({
             'role': 'tabpanel',
-            'aria-expanded': 'false',
             'aria-hidden': 'true',
             'tabindex': '-1',
             'aria-labelledby': $this.data('label')
@@ -48,9 +48,11 @@
         });
 
         // Puis les premiers de chaque type sont activés.
-        $tabs.first().attr('aria-selected', 'true');
+        $tabs.first().attr({
+          'aria-selected': 'true',
+          'aria-expanded': 'true'
+        });
         $panels.first().attr({
-          'aria-expanded': 'true',
           'aria-hidden': 'false',
           'tabindex': '0'
         });
@@ -68,17 +70,21 @@
         $index = $self.find('a').attr('href');
 
         // Puis on désactive tous les onglets (tab) et leurs contenus (tabpanel)
-        $tabs.attr('aria-selected', 'false');
+        $tabs.attr({
+          'aria-selected': 'false',
+          'aria-expanded': 'false'
+        });
         $panels.attr({
-          'aria-expanded': 'false',
           'aria-hidden': 'true',
           'tabindex': '-1'
         });
 
         // On active l’onglet cliqué (tab) ainsi que son contenu associé (tabpanel)
-        $self.attr('aria-selected', 'true');
+        $self.attr({
+          'aria-selected': 'true',
+          'aria-expanded': 'true'
+        });
         $($index).attr({
-          'aria-expanded': 'true',
           'aria-hidden': 'false',
           'tabindex':'0'
         }).focus();

@@ -3,6 +3,10 @@ ffeeeedd__accordeons
 
 Une extension pour ffeeeedd--sass basée sur [jQuery Simple Tabs](https://github.com/bluety/simpleTabs), pour créer un groupe d’accordéons facilement. Le script référence a été largement modifié, afin de prendre en compte les structures ARIA recommandées, rendre le contenu correctement sans javascript et être accessible au clavier.
 
+Référence(s) utile(s) :
+* [Notice AcceDe Web](http://wiki.accede-web.com/notices/interfaces-riches-javascript/accordeons-plier-deplier)
+* [OpenAjax Alliance](http://oaa-accessibility.org/example/35/)
+
 Mode d'emploi
 -------------
 
