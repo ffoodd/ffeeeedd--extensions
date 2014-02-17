@@ -19,19 +19,31 @@
       var initialise = function () {
         // On ajoute le premier rôle ARIA
         $list.attr('role', 'tablist');
+
         // En premier lieu les accordéons (tab) sont tous inactifs
-        $tabs.attr('role', 'tab').attr('aria-selected', 'false').attr('tabindex', '-1');
         // Pour chacun, la valeur de data-controls sert à ajouter l’attribut aria-controls
         $tabs.each(function() {
-          $controls = $(this).data('controls');
-          $(this).attr('aria-controls', $controls);
+          $this = $(this);
+          $this.attr({
+            'role': 'tab',
+            'aria-selected': 'false',
+            'tabindex': '-1',
+            'aria-controls': $this.find('a').attr('href').replace('#', '')
+          });
+          $this.removeAttr('data-job');
         });
+
         // Les contenus (tabpanel) sont également désactivés dans un premier temps
-        $panels.attr('role', 'tabpanel').attr('aria-expanded', 'false').attr('aria-hidden', 'true');
         // On récupère également data-label pour remplir aria-labbelledby
         $panels.each(function() {
-          $label = $(this).data('label');
-          $(this).attr('aria-labelledby', $label);
+          $this = $(this);
+          $this.attr({
+            'role': 'tabpanel',
+            'aria-expanded': 'false',
+            'aria-hidden': 'true',
+            'aria-labelledby': $this.data('label')
+          });
+          $this.removeAttr('data-job data-label');
         });
       }
       initialise();
@@ -39,41 +51,41 @@
       // Au clic sur un accordéon (tab)
       $tabs.on('click', function(e) {
         e.preventDefault();
-        // On donne le focus à l’accordéon cliqué
-        $(this).focus();
+
         if( $(this).attr('aria-selected') == 'true'){
           // On désactive tous les accordéons (tab) et leurs contenus (tabpanel)
-          $tabs.attr('aria-selected', 'false').attr('tabindex', '-1');
-          $panels.attr('aria-expanded', 'false').attr('aria-hidden', 'true');
+          $tabs.attr({
+            'aria-selected': 'false',
+            'tabindex': '-1'
+          });
+          $panels.attr({
+            'aria-expanded': 'false',
+            'aria-hidden': 'true'
+          });
         } else {
-          var $self = $(this),
-              // On récupère l’ID du contenu qu’il contrôle
-              $index = $self.data('controls');
-          // Puis on désactive tous les accordéons (tab) et leurs contenus (tabpanel)
-          $tabs.attr('aria-selected', 'false').attr('tabindex', '-1');
-          $panels.attr('aria-expanded', 'false').attr('aria-hidden', 'true');
-          // Enfin on active l’accordéon cliqué (tab) ainsi que son contenu associé (tabpanel)
-          $self.attr('aria-selected', 'true').attr('tabindex', '0');
-          $('[id=' + $index + ']').attr('aria-expanded', 'true').attr('aria-hidden', 'false');
-        }
-      });
+          var $self = $(this);
+          // On récupère l’ID du contenu qu’il contrôle
+          $index = $self.find('a').attr('href');
 
-      // Le contrôle au clavier est basique : la pression sur les touches spécifiée du clavier imite le comportement au clic
-      $tabs.on('keydown', function(ev) {
-        ev.preventDefault();
-        // Si on appuie sur «Entrée» ou «Espace»
-        if ((ev.which == 13) || (ev.which == 32)) {
-          $(this).click();
-        }
-        // Si on appuie sur «Début»
-        if (ev.which == 36) {
-          // Le premier accordéon (tab) est visé
-          $tabs.first('[data-job="tab"]').click();
-        }
-        // Si on appuie sur «Fin»
-        if (ev.which == 35) {
-          // Le premier accordéon (tab) est visé
-          $tabs.last('[data-job="tab"]').click();
+          // Puis on désactive tous les accordéons (tab) et leurs contenus (tabpanel)
+          $tabs.attr({
+            'aria-selected': 'false',
+            'tabindex': '-1'
+          });
+          $panels.attr({
+            'aria-expanded': 'false',
+            'aria-hidden': 'true'
+          });
+
+          // Enfin on active l’accordéon cliqué (tab) ainsi que son contenu associé (tabpanel)
+          $self.attr({
+            'aria-selected': 'true',
+            'tabindex': '0'
+          });
+          $($index).attr({
+            'aria-expanded': 'true',
+            'aria-hidden': 'false'
+          });
         }
       });
     });
