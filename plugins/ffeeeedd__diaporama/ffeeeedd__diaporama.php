@@ -198,7 +198,7 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
             <?php } wp_reset_postdata(); ?>
           </div>
 
-        </section><!-- .ffeeeedd--diaporama -->
+        </section><!-- .ffeeeedd-diaporama -->
       <?php } wp_reset_query();
   }
 }
