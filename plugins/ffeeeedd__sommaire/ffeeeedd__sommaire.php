@@ -60,7 +60,9 @@ add_filter( 'the_content', 'ffeeeedd__sommaire__ancres', 12 );
 /* == @section Création du sommaire ==================== */
 function ffeeeedd__sommaire( $echo = false ) {
   global $post;
-  $obj = '<ol id="toc" class="print-hidden">';
+  $obj = '<div class="widget">
+    <h3 class="widget--title">' . __( 'Table of content', 'ffeeeedd__sommaire' ) . '</h3>
+    <ol id="toc" class="print-hidden">';
   $original_content = $post->post_content;
   // On récupère les titres
   $patt = "/<h3(.*?)>(.*?)<\/h3>/i";
@@ -69,7 +71,7 @@ function ffeeeedd__sommaire( $echo = false ) {
   foreach( $results[2] as $k=>$r ) {
     $obj .= '<li><a href="' . get_permalink( $post->ID ) . '#' . sanitize_title( $r ) . '" class="scroll">' . $r . '</a></li>';
   }
-  $obj .= '<li><a href="' . get_permalink( $post->ID ) . '#comments" class="scroll">' . __( 'Comments', 'ffeeeedd__sommaire' ) . '</a></li></ol>';
+  $obj .= '<li><a href="' . get_permalink( $post->ID ) . '#comments" class="scroll">' . __( 'Comments', 'ffeeeedd__sommaire' ) . '</a></li></ol></div>';
   if ( $echo ) {
     echo $obj;
   } else {

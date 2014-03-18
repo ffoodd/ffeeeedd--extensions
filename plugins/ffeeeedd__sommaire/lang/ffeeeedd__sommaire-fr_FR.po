@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ffeeeedd__sommaire\n"
-"POT-Creation-Date: 2014-02-05 16:56+0100\n"
-"PO-Revision-Date: 2014-02-05 16:56+0100\n"
+"POT-Creation-Date: 2014-03-18 12:00+0100\n"
+"PO-Revision-Date: 2014-03-18 12:00+0100\n"
 "Last-Translator: Gaël Poupard <gael@1-ter-net.com>\n"
 "Language-Team: Gaël Poupard\n"
 "Language: english\n"
@@ -18,11 +18,15 @@ msgstr ""
 "X-Poedit-SearchPath-0: D:\\clients\\GitHub\\ffeeeedd--extensions\\plugins"
 "\\ffeeeedd__sommaire\n"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__sommaire/ffeeeedd__sommaire.php:31
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__sommaire/ffeeeedd__sommaire.php:42
 msgid "Back to the table of content"
 msgstr "Retour au sommaire"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__sommaire/ffeeeedd__sommaire.php:61
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__sommaire/ffeeeedd__sommaire.php:64
+msgid "Table of content"
+msgstr "Sommaire"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__sommaire/ffeeeedd__sommaire.php:74
 msgid "Comments"
 msgstr "Commentaires"
 
