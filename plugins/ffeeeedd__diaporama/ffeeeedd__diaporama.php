@@ -116,7 +116,7 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
       */
     if( $diaporamas->have_posts() ) {
       $counter = 0; ?>
-      <section class="ffeeeedd--diaporamas" aria-labelledby="section-diaporama">
+      <section class="ffeeeedd--diaporamas mw--site" aria-labelledby="section-diaporama">
         <span class="visually-hidden" id="section-diaporama"><?php _e( 'Slideshow', 'ffeeeedd--diaporama' ); ?></span>
 
         <?php // @note On boucle une première fois pour incrémenter le compteur
@@ -179,7 +179,7 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
 
             <?php while( $diaporamas->have_posts() ) {
             $diaporamas->the_post(); ?>
-            <article class="ffeeeedd--diaporama">
+            <article class="ffeeeedd--diaporama w--site">
               <?php if ( has_post_thumbnail() ) {
                 the_post_thumbnail( 'diaporama', array( 'alt' => '') );
               } ?>
