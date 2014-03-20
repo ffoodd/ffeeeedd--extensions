@@ -14,6 +14,8 @@ if ( !defined( 'ABSPATH' ) ) die();
 /* ----------------------------- */
 /*
   == Création des shortcodes
+    -- Shortcodes « Onglets »
+    -- Shortcodes « Onglet »
   == Injection du javascript
 */
 
@@ -23,7 +25,10 @@ if ( !defined( 'ABSPATH' ) ) die();
   * @author Gaël Poupard
   * @see https://twitter.com/ffoodd_fr
   */
+
+/* -- @subsection Shortcodes « Onglets » -------------------- */
 function ffeeeedd__shortcode__onglets( $atts, $content = null ) {
+  $content = force_balance_tags( $content );
   return '<div
     data-function="tabs"
     class="ffeeeedd__onglets">' . do_shortcode( $content ) . '
@@ -31,10 +36,12 @@ function ffeeeedd__shortcode__onglets( $atts, $content = null ) {
 }
 add_shortcode( 'onglets', 'ffeeeedd__shortcode__onglets' );
 
+/* -- @subsection Shortcodes « Onglet » -------------------- */
 function ffeeeedd__shortcode__onglet( $atts, $content = null ) {
   extract( shortcode_atts( array(
     'titre' => 'Titre manquant',
   ), $atts ) );
+  $content = force_balance_tags( $content );
   $label = sanitize_html_class( sanitize_title( strtolower( $titre ) ) );
   return '<h3
     data-role="tab"

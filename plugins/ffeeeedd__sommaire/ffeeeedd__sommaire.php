@@ -81,11 +81,11 @@ function ffeeeedd__sommaire( $echo = false ) {
 
 
 /* == @section Création d’un shortcode pour afficher le sommaire ==================== */
-add_shortcode( 'sommaire','ffeeeedd__sommaire' );
+add_shortcode( 'sommaire', 'ffeeeedd__sommaire' );
 
 
 /* == @section Permet l'utilisation de shortcodes dans les sidebars ==================== */
-add_filter('widget_text', 'do_shortcode');
+add_filter( 'widget_text', 'do_shortcode' );
 
 
 /* == @section Injection du javascript ==================== */

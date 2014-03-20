@@ -24,6 +24,7 @@ if ( !defined( 'ABSPATH' ) ) die();
   * @see https://twitter.com/ffoodd_fr
   */
 function ffeeeedd__shortcode__accordeons( $atts, $content = null ) {
+  $content = force_balance_tags( $content );
   return '<div
     data-job="tablist"
     class="ffeeeedd__accordeons">' . do_shortcode( $content ) . '
@@ -35,6 +36,7 @@ function ffeeeedd__shortcode__accordeon( $atts, $content = null ) {
   extract( shortcode_atts( array(
     'titre' => 'Titre manquant',
   ), $atts ) );
+  $content = force_balance_tags( $content );
   $label = sanitize_html_class( sanitize_title( strtolower( $titre ) ) );
   return '<h3
     data-job="tab"
