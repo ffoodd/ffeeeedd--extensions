@@ -1,10 +1,11 @@
 ;(function($) {
-  /*
-   * jQuery JavaScript Plugin
-   * Name: Simple accordion Plugin
-   * Version: 1.0.0
-   *
+  /**
+   * ffeeeedd__acordeons
    * @author Gaël Poupard
+   * @see http://www.ffoodd.fr
+   * @note Basé sur jQuery Simple Tabs Plugin
+   * @author TYR Théo-Maxime
+   * @see https://github.com/bluety/simpleTabs
    */
 
   $.fn.accordions = function() {

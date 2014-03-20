@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ffeeeedd--diaporama\n"
-"POT-Creation-Date: 2014-02-13 14:48+0100\n"
-"PO-Revision-Date: 2014-02-13 14:51+0100\n"
+"POT-Creation-Date: 2014-03-20 17:39+0100\n"
+"PO-Revision-Date: 2014-03-20 17:39+0100\n"
 "Last-Translator: Gaël Poupard <gael@1-ter-net.com>\n"
 "Language-Team: Gaël Poupard\n"
 "Language: english\n"
@@ -18,87 +18,83 @@ msgstr ""
 "X-Poedit-SearchPath-0: D:\\clients\\GitHub\\ffeeeedd--extensions\\plugins"
 "\\ffeeeedd__diaporama\n"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:39
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:41
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:53
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:40
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:42
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:54
 msgid "Slides"
 msgstr "Diaporamas"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:40
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:41
 msgid "Slide"
 msgstr "Diaporama"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:42
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:43
 msgid "All slides"
 msgstr "Tous les diaporamas"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:43
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:44
 msgid "View slide"
 msgstr "Voir le diaporama"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:44
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:45
 msgid "Add slide"
 msgstr "Ajouter un diaporama"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:45
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:46
 msgid "New slide"
 msgstr "Nouveau diaporama"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:46
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:47
 msgid "Edit slide"
 msgstr "Modifier le diaporama"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:47
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:48
 msgid "Update slide"
 msgstr "Ajouter un diaporama"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:48
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:49
 msgid "Search slides"
 msgstr "Rechercher parmi les diaporamas"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:49
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:50
 msgid "No slide found"
 msgstr "Aucune diaporama trouvé"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:50
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:51
 msgid "No slide in trash"
 msgstr "Aucun diaporama dans la corbeille"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:69
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:70
 msgid "slides"
 msgstr "diaporamas"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:109
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:120
 msgid "Slideshow"
 msgstr "Diaporamas"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:129
-msgid "Read more"
-msgstr "En savoir plus"
-
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:131
-msgid "about"
-msgstr "à propos de"
-
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:151
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:153
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:139
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:141
 msgid "Previous"
 msgstr "Précédent"
 
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:159
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:161
-msgid "Pause"
-msgstr "Pause"
-
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:167
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:169
-msgid "Play"
-msgstr "Lecture"
-
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:175
-#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:177
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:146
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:148
 msgid "Next"
 msgstr "Suivant"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:168
+msgid "Read more"
+msgstr "En savoir plus"
+
+#: D:\clients\GitHub\ffeeeedd--extensions\plugins\ffeeeedd__diaporama/ffeeeedd__diaporama.php:170
+msgid "about"
+msgstr "à propos de"
+
+#~ msgid "Pause"
+#~ msgstr "Pause"
+
+#~ msgid "Play"
+#~ msgstr "Lecture"
 
 #~ msgid "Permalink to the post"
 #~ msgstr "Consulter "

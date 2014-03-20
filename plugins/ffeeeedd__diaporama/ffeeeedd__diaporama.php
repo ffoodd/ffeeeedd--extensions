@@ -116,7 +116,7 @@ if ( ! function_exists( 'ffeeeedd__diaporama' ) ) {
       */
     if ( $diaporamas->have_posts() ) {
       $counter = 0; ?>
-      <section class="ffeeeedd--diaporamas mw--site center clear" aria-labelledby="section-diaporama">
+      <section class="section--diaporamas mw--site center clear" aria-labelledby="section-diaporama">
         <span class="visually-hidden" id="section-diaporama"><?php _e( 'Slideshow', 'ffeeeedd--diaporama' ); ?></span>
 
         <?php // @note On boucle une première fois pour incrémenter le compteur
@@ -128,39 +128,21 @@ if ( ! function_exists( 'ffeeeedd__diaporama' ) ) {
         // @note On ne charge le script et les contrôles que s’il y a plus d’un item
         if ( $counter > 1 ) {
           wp_enqueue_script(
-            'cycle2',
-            plugins_url( 'js/jquery.cycle2.min.js', __FILE__ ),
+            'ffeeeedd-diaporama',
+            plugins_url( 'js/jquery.ffeeeedd-diaporama.min.js', __FILE__ ),
             array( 'jquery' ),
             null,
             true
           ); ?>
           <div class="ffeeeedd--controles js-visible">
-            <button data-cycle-cmd="prev"
-                    data-cycle-context=".cycle-slideshow"
+            <button class="ffeeeedd--precedent"
                     title="<?php _e( 'Previous', 'ffeeeedd--diaporama' ); ?>">
               <span class="visually-hidden">
                 <?php _e( 'Previous', 'ffeeeedd--diaporama' ); ?>
               </span>
               <span aria-hidden="true">&lt;</span>
             </button>
-            <button data-cycle-cmd="pause"
-                    data-cycle-context=".cycle-slideshow"
-                    title="<?php _e( 'Pause', 'ffeeeedd--diaporama' ); ?>">
-              <span class="visually-hidden">
-                <?php _e( 'Pause', 'ffeeeedd--diaporama' ); ?>
-              </span>
-              <span aria-hidden="true">&#124;&#124;</span>
-            </button>
-            <button data-cycle-cmd="resume"
-                    data-cycle-context=".cycle-slideshow"
-                    title="<?php _e( 'Play', 'ffeeeedd--diaporama' ); ?>">
-              <span class="visually-hidden">
-                <?php _e( 'Play', 'ffeeeedd--diaporama' ); ?>
-              </span>
-              <span aria-hidden="true">&#9658;</span>
-            </button>
-            <button data-cycle-cmd="next"
-                    data-cycle-context=".cycle-slideshow"
+            <button class="ffeeeedd--suivant"
                     title="<?php _e( 'Next', 'ffeeeedd--diaporama' ); ?>">
               <span class="visually-hidden">
                 <?php _e( 'Next', 'ffeeeedd--diaporama' ); ?>
@@ -170,12 +152,7 @@ if ( ! function_exists( 'ffeeeedd__diaporama' ) ) {
           </div>
         <?php } ?>
 
-        <div class="cycle-slideshow"
-             data-cycle-slides="> article"
-             data-cycle-fx="scrollHorz"
-             data-cycle-timeout="5000"
-             data-cycle-manual-speed="500"
-             data-cycle-pause-on-hover="true">
+        <div class="ffeeeedd--diaporamas">
 
             <?php while ( $diaporamas->have_posts() ) {
             $diaporamas->the_post(); ?>

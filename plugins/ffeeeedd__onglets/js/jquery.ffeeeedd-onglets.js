@@ -1,13 +1,12 @@
 ;(function($) {
-  /*
-   * jQuery JavaScript Plugin
-   * Name: Simple Tabs Plugin
-   * Version: 1.0.0
-   *
-   * TYR Théo-Maxime
-   * http://integrateur-web.pro
-   *
-   * https://github.com/bluety/simpleTabs
+
+  /**
+   * ffeeeedd__onglets
+   * @author Gaël Poupard
+   * @see http://www.ffoodd.fr
+   * @note Basé sur jQuery Simple Tabs Plugin
+   * @author TYR Théo-Maxime
+   * @see https://github.com/bluety/simpleTabs
    */
 
   $.fn.tabs = function() {
