@@ -45,7 +45,7 @@ function ffeeeedd__sommaire__patron( $matches ) {
 
 /* == @section Ajout d’un filtre sur le contenu ==================== */
 function ffeeeedd__sommaire__ancres( $content ) {
-  if( is_singular( 'post' ) ) {
+  if ( is_singular( 'post' ) ) {
     global $post;
     $pattern = "/<h([3])(.*?)>(.*?)<\/h([3])>/i";
     $content = preg_replace_callback( $pattern, 'ffeeeedd__sommaire__patron', $content );
@@ -68,7 +68,7 @@ function ffeeeedd__sommaire( $echo = false ) {
   $patt = "/<h3(.*?)>(.*?)<\/h3>/i";
   preg_match_all( $patt, $original_content, $results );
   // On génère les liens
-  foreach( $results[2] as $k=>$r ) {
+  foreach ( $results[2] as $k=>$r ) {
     $obj .= '<li><a href="' . get_permalink( $post->ID ) . '#' . sanitize_title( $r ) . '" class="scroll">' . $r . '</a></li>';
   }
   $obj .= '<li><a href="' . get_permalink( $post->ID ) . '#comments" class="scroll">' . __( 'Comments', 'ffeeeedd__sommaire' ) . '</a></li></ol></div>';
@@ -90,9 +90,9 @@ add_filter( 'widget_text', 'do_shortcode' );
 
 /* == @section Injection du javascript ==================== */
 function ffeeeedd__sommaire__js() {
-  if( wp_script_is( 'ffeeeedd-scroll', 'enqueued' ) ) {
+  if ( wp_script_is( 'ffeeeedd-scroll', 'enqueued' ) ) {
     return;
-  } elseif( is_singular( 'post' ) ) {
+  } elseif ( is_singular( 'post' ) ) {
     wp_register_script(
       'ffeeeedd-scroll',
       plugins_url( 'js/ffeeeedd-scroll.min.js', __FILE__ ),

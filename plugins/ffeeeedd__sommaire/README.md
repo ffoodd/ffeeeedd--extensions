@@ -13,7 +13,7 @@ Une fois l’extension installée, vous pouvez l’utiliser de deux façons :
 *Si vous utilisez la première méthode, pensez à vérifier l’existence de la fonction afin de ne pas générer d’erreur :*
 
 ```php
-if( function_exists( 'ffeeeedd__sommaire' ) ) {
+if ( function_exists( 'ffeeeedd__sommaire' ) ) {
   ffeeeedd__sommaire();
 }
 ```

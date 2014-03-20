@@ -11,7 +11,7 @@ Une fois l’extension installée, vous pouvez l’utiliser en ajoutant dans `si
 *Pensez à vérifier son existence afin de ne pas générer d’erreur :*
 
 ```php
-if( function_exists( 'ffeeeedd__notes' ) ) {
+if ( function_exists( 'ffeeeedd__notes' ) ) {
   ffeeeedd__notes();
 }
 ```

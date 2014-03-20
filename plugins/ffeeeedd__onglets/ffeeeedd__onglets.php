@@ -67,7 +67,7 @@ add_shortcode( 'onglet', 'ffeeeedd__shortcode__onglet' );
   */
 function ffeeeedd__onglets() {
   global $post;
-  if( has_shortcode( $post->post_content, 'onglets') ) {
+  if ( has_shortcode( $post->post_content, 'onglets') ) {
     wp_enqueue_script(
       'ffeeeedd-onglets',
       plugins_url( 'js/jquery.ffeeeedd-onglets.min.js', __FILE__ ),

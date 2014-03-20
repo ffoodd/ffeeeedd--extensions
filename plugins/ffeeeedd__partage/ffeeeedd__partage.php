@@ -31,7 +31,7 @@ add_action( 'plugins_loaded', 'ffeeeedd__partage_init' );
  */
 function ffeeeedd__partage() {
   global $post;
-  if( is_singular( 'post' ) ) {
+  if ( is_singular( 'post' ) ) {
     $link = esc_url( get_permalink() );
     echo '
     <ul class="print-hidden">

@@ -90,7 +90,7 @@ register_activation_hook( __FILE__, 'ffeeeedd__diaporamas_rewrite__flush' );
   * @see https://twitter.com/ffoodd_fr
   * @note Dimensions personnalisables : à répercuter sur le CSS.
   */
-if( function_exists( 'add_image_size' ) ) {
+if ( function_exists( 'add_image_size' ) ) {
   add_image_size( 'diaporama', 980, 430, true );
 }
 
@@ -100,7 +100,7 @@ if( function_exists( 'add_image_size' ) ) {
   * @author Gaël Poupard
   * @see https://www.ffoodd.fr
   */
-if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
+if ( ! function_exists( 'ffeeeedd__diaporama' ) ) {
   function ffeeeedd__diaporama() {
 
     /* -- @subsection Paramétrage de la boucle -------------------- */
@@ -114,9 +114,9 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
     /**
       * @note Si on a des diaporamas :
       */
-    if( $diaporamas->have_posts() ) {
+    if ( $diaporamas->have_posts() ) {
       $counter = 0; ?>
-      <section class="ffeeeedd--diaporamas mw--site" aria-labelledby="section-diaporama">
+      <section class="ffeeeedd--diaporamas mw--site center clear" aria-labelledby="section-diaporama">
         <span class="visually-hidden" id="section-diaporama"><?php _e( 'Slideshow', 'ffeeeedd--diaporama' ); ?></span>
 
         <?php // @note On boucle une première fois pour incrémenter le compteur
@@ -126,7 +126,7 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
         }
         wp_reset_postdata();
         // @note On ne charge le script et les contrôles que s’il y a plus d’un item
-        if( $counter > 1 ) {
+        if ( $counter > 1 ) {
           wp_enqueue_script(
             'cycle2',
             plugins_url( 'js/jquery.cycle2.min.js', __FILE__ ),
@@ -177,7 +177,7 @@ if( ! function_exists( 'ffeeeedd__diaporama' ) ) {
              data-cycle-manual-speed="500"
              data-cycle-pause-on-hover="true">
 
-            <?php while( $diaporamas->have_posts() ) {
+            <?php while ( $diaporamas->have_posts() ) {
             $diaporamas->the_post(); ?>
             <article class="ffeeeedd--diaporama w--site">
               <?php if ( has_post_thumbnail() ) {

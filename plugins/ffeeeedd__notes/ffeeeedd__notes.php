@@ -30,13 +30,13 @@ add_action( 'plugins_loaded', 'ffeeeedd__notes_init' );
 /* == @section Création de la liste des notes de bas de page ==================== */
 function ffeeeedd__notes() {
     global $post;
-    if( has_shortcode( $post->post_content, 'note' ) ) {
+    if ( has_shortcode( $post->post_content, 'note' ) ) {
       $liste = '<ol class="m-reset pt2 pb2">';
       $original_content = do_shortcode( $post->post_content );
       $sup = "/<sup aria-describedby=\"(.*?)\" id=\"(.*?)\" data-note=\"(.*?)\">(.*?)<\/sup>/i";
       preg_match_all( $sup, $original_content, $notes );
       $chiffre = 0;
-      foreach( $notes[3] as $k=>$r  ) {
+      foreach ( $notes[3] as $k=>$r  ) {
         $chiffre++;
         $liste .= '<li role="note" id="note-' . esc_attr( $chiffre ) . '">' . $r . '&nbsp;<a class="scroll print-hidden" href="' . get_permalink( $post->ID ) . '#lien-' . esc_attr( $chiffre ) . '" title="' . __( 'Resume', 'ffeeeedd--notes' ) . '"><span aria-hidden="true">[&rarr;]</span></a></li>';
       }
@@ -60,9 +60,9 @@ add_shortcode( 'note', 'ffeeeedd__notes__shortcode' );
 
 /* == @section Injection du javascript ==================== */
 function ffeeeedd__notes__js() {
-  if( wp_script_is( 'ffeeeedd-scroll', 'enqueued' ) ) {
+  if ( wp_script_is( 'ffeeeedd-scroll', 'enqueued' ) ) {
     return;
-  } elseif( is_singular( 'post' ) ) {
+  } elseif ( is_singular( 'post' ) ) {
     wp_register_script(
       'ffeeeedd-scroll',
       plugins_url( 'js/ffeeeedd-scroll.min.js', __FILE__ ),

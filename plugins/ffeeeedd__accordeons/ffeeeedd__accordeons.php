@@ -62,7 +62,7 @@ add_shortcode( 'accordeon', 'ffeeeedd__shortcode__accordeon' );
   */
 function ffeeeedd__accordeons() {
   global $post;
-  if( has_shortcode( $post->post_content, 'accordeons') ) {
+  if ( has_shortcode( $post->post_content, 'accordeons') ) {
     wp_enqueue_script(
       'ffeeeedd-accordeons',
       plugins_url( 'js/jquery.ffeeeedd-accordeons.min.js', __FILE__ ),

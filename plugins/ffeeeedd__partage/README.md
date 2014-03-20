@@ -11,7 +11,7 @@ Cette extension crée simplement la fonction `ffeeeedd__partage();`, qu’il vou
 *Pensez à vérifier son existence afin de ne pas générer d’erreur :*
 
 ```php
-if( function_exists( 'ffeeeedd__partage' ) ) {
+if ( function_exists( 'ffeeeedd__partage' ) ) {
   ffeeeedd__partage();
 }
 ```
