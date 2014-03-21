@@ -14,9 +14,9 @@
     // private properties and methods go here
     var c = {
       bcClass: 'sf-breadcrumb',
-      menuClass: 'sf-js-enabled',
-      anchorClass: 'sf-with-ul',
-      menuArrowClass: 'sf-arrows'
+      menuClass: 'ffeeeedd--menu',
+      anchorClass: 'ffeeeedd--sous-menu',
+      menuArrowClass: 'ffeeeedd--fleches'
     },
         ios = (function () {
           var ios = /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -43,7 +43,7 @@
           return $menu.find('li.' + o.pathClass).slice(0, o.pathLevels)
           .addClass(o.hoverClass + ' ' + c.bcClass)
           .filter(function () {
-            return ($(this).children(o.popUpSelector).hide().show().length);
+            return ($(this).children(o.popUpSelector).length);
           }).removeClass(o.pathClass);
         },
         toggleAnchorClass = function ($li) {
@@ -137,10 +137,7 @@
               $ul = $this.find('li.' + o.hoverClass).add(this).not(not).removeClass(o.hoverClass).children(o.popUpSelector),
               speed = o.speedOut;
 
-          if (instant) {
-            $ul.show();
-            speed = 0;
-          }
+
           o.retainPath = false;
           o.onBeforeHide.call($ul);
           $ul.stop(true, true).animate(o.animationOut, speed, function () {
@@ -229,12 +226,12 @@
 
   $.fn.superfish.defaults = {
     popUpSelector: 'ul,.sf-mega', // within menu context
-    hoverClass: 'sfHover',
+    hoverClass: 'ffeeeedd--survol',
     pathClass: 'overrideThisToUse',
     pathLevels: 1,
     delay: 800,
-    animation: {opacity: 'show'},
-    animationOut: {opacity: 'hide'},
+    animation: {},
+    animationOut: {},
     speed: 'normal',
     speedOut: 'fast',
     cssArrows: true,
@@ -249,9 +246,9 @@
   };
 
   // soon to be deprecated
-  $.fn.extend({
+  /*$.fn.extend({
     hideSuperfishUl: methods.hide,
     showSuperfishUl: methods.show
-  });
+  });*/
 
 })(jQuery);
