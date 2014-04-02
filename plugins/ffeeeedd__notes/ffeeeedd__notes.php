@@ -30,7 +30,7 @@ add_action( 'plugins_loaded', 'ffeeeedd__notes_init' );
 /* == @section Création de la liste des notes de bas de page ==================== */
 function ffeeeedd__notes() {
     global $post;
-    if ( has_shortcode( $post->post_content, 'note' ) ) {
+    if ( shortcode_exists( 'note' ) ) {
       $liste = '<ol class="m-reset pt2 pb2">';
       $original_content = do_shortcode( $post->post_content );
       $sup = "/<sup aria-describedby=\"(.*?)\" id=\"(.*?)\" data-note=\"(.*?)\">(.*?)<\/sup>/i";
@@ -41,7 +41,9 @@ function ffeeeedd__notes() {
         $liste .= '<li role="note" id="note-' . esc_attr( $chiffre ) . '">' . $r . '&nbsp;<a class="scroll print-hidden" href="' . get_permalink( $post->ID ) . '#lien-' . esc_attr( $chiffre ) . '" title="' . __( 'Resume', 'ffeeeedd--notes' ) . '"><span aria-hidden="true">[&rarr;]</span></a></li>';
       }
       $liste .= '</ol>';
-      echo $liste;
+      if ( $chiffre >= 1 ) {
+        echo $liste;
+      }
     }
   }
 
