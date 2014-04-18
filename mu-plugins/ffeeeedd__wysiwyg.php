@@ -2,7 +2,7 @@
 /*
 Plugin Name: ffeeeedd--WYSIWYG
 Description: Améliore le WYSIWYG pour faciliter la création de contenu accessible.
-Version: 29 01 2014
+Version: 18 04 2014
 */
 
 /**
@@ -16,24 +16,31 @@ Version: 29 01 2014
 /* Sommaire */
 /* ----------------------------- */
 /*
-  == Ajouts d’extensions TinyMCE
+  == Création d'une extension personnalisée TinyMCE
   == Amélioration du WYSIWYG de base
 */
 
 
-/* == @section Ajouts d’extensions TinyMCE ====================
- * @note Vous pouvez ajouter d’autres plugins TinyMCE
- * @see http://www.tinymce.com/wiki.php/TinyMCE3x:Buttons/controls
+/* == @section Création d'une extension personnalisée TinyMCE ====================
+ * @see https://www.gavick.com/magazine/adding-your-own-buttons-in-tinymce-4-editor.html
  */
+add_action( 'admin_head', 'ffeeeedd__plugins' );
+
 function ffeeeedd__plugins() {
-  $plugins = array( 'xhtmlxtras' );
-  $plugins_array = array();
-  foreach ( $plugins as $plugin ) {
-    $plugins_array[ $plugin ] = content_url( '/mu-plugins/ffeeeedd__wysiwyg/tinymce_plugins/', __FILE__) . $plugin . '/editor_plugin.js';
-  }
-  return $plugins_array;
+  global $typenow;
+  add_filter( "mce_external_plugins", "ffeeeedd__plugin" );
+  add_filter( 'mce_buttons', 'ffeeeedd__button' );
 }
-add_filter( 'mce_external_plugins', 'ffeeeedd__plugins' );
+
+function ffeeeedd__plugin( $plugin_array ) {
+  $plugin_array['ffeeeedd__plugins'] = content_url( '/mu-plugins/ffeeeedd__wysiwyg/boutons.js' );
+  return $plugin_array;
+}
+
+function ffeeeedd__button( $bouton ) {
+  array_push( $bouton, 'abbr' );
+  return $bouton;
+}
 
 
 /* == @section Amélioration du WYSIWYG de base ==================== */
