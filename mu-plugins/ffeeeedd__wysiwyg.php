@@ -38,7 +38,7 @@ add_filter( 'mce_external_plugins', 'ffeeeedd__plugins' );
 
 /* == @section Amélioration du WYSIWYG de base ==================== */
 function ffeeeedd__wysiwyg( $boutons ) {
-  $boutons['theme_advanced_blockformats'] = 'p,h2,h3,h4,pre';
+  $boutons['block_formats'] = 'Paragraphe=p;Titre 2=h2,Titre 3=h3,Titre 4=h4,Pre=pre';
   $boutons['theme_advanced_disable'] = 'underline,justifyfull,strikethrough,forecolor,justifyleft,justifycenter,justifyright,media,wp_adv,hr,wp_more,wp_help';
   $boutons['theme_advanced_buttons1'] = 'undo,redo,formatselect,bold,italic,sub,sup,|,bullist,numlist,blockquote,cite,abbr,|,outdent,indent,|,link,unlink,|,|,charmap,|,pasteword,removeformat,|,wp_fullscreen';
   $boutons['theme_advanced_buttons2'] = '';
