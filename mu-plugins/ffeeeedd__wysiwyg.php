@@ -2,7 +2,7 @@
 /*
 Plugin Name: ffeeeedd--WYSIWYG
 Description: Améliore le WYSIWYG pour faciliter la création de contenu accessible.
-Version: 29 01 2014
+Version: 18 04 2014
 */
 
 /**
@@ -16,34 +16,39 @@ Version: 29 01 2014
 /* Sommaire */
 /* ----------------------------- */
 /*
-  == Ajouts d’extensions TinyMCE
+  == Création d'une extension personnalisée TinyMCE
   == Amélioration du WYSIWYG de base
 */
 
 
-/* == @section Ajouts d’extensions TinyMCE ====================
- * @note Vous pouvez ajouter d’autres plugins TinyMCE
- * @see http://www.tinymce.com/wiki.php/TinyMCE3x:Buttons/controls
+/* == @section Création d'une extension personnalisée TinyMCE ====================
+ * @see https://www.gavick.com/magazine/adding-your-own-buttons-in-tinymce-4-editor.html
  */
+add_action( 'admin_head', 'ffeeeedd__plugins' );
+
 function ffeeeedd__plugins() {
-  $plugins = array( 'xhtmlxtras' );
-  $plugins_array = array();
-  foreach ( $plugins as $plugin ) {
-    $plugins_array[ $plugin ] = content_url( '/mu-plugins/ffeeeedd__wysiwyg/tinymce_plugins/', __FILE__) . $plugin . '/editor_plugin.js';
-  }
-  return $plugins_array;
+  global $typenow;
+  add_filter( "mce_external_plugins", "ffeeeedd__plugin" );
+  add_filter( 'mce_buttons', 'ffeeeedd__button' );
 }
-add_filter( 'mce_external_plugins', 'ffeeeedd__plugins' );
+
+function ffeeeedd__plugin( $plugin_array ) {
+  $plugin_array['ffeeeedd__plugins'] = content_url( '/mu-plugins/ffeeeedd__wysiwyg/boutons.js' );
+  return $plugin_array;
+}
+
+function ffeeeedd__button( $bouton ) {
+  array_push( $bouton, 'abbr' );
+  return $bouton;
+}
 
 
 /* == @section Amélioration du WYSIWYG de base ==================== */
 function ffeeeedd__wysiwyg( $boutons ) {
-  $boutons['theme_advanced_blockformats'] = 'p,h2,h3,h4,pre';
-  $boutons['theme_advanced_disable'] = 'underline,justifyfull,strikethrough,forecolor,justifyleft,justifycenter,justifyright,media,wp_adv,hr,wp_more,wp_help';
-  $boutons['theme_advanced_buttons1'] = 'undo,redo,formatselect,bold,italic,sub,sup,|,bullist,numlist,blockquote,cite,abbr,|,outdent,indent,|,link,unlink,|,|,charmap,|,pasteword,removeformat,|,wp_fullscreen';
-  $boutons['theme_advanced_buttons2'] = '';
-  $boutons['paste_text_use_dialog'] = "false";
-  $boutons['paste_auto_cleanup_on_paste'] = "true";
+  $boutons['block_formats'] = 'Paragraphe=p;Titre 2=h2;Titre 3=h3;Titre 4=h4;Pre=pre';
+  $boutons['toolbar1'] = 'undo,redo,formatselect,bold,italic,sub,sup,|,bullist,numlist,blockquote,cite,abbr,|,outdent,indent,|,link,unlink,|,|,charmap,|,removeformat,|,wp_fullscreen';
+  $boutons['toolbar2'] = '';
+  $boutons['paste_as_text'] = true;
   return $boutons;
 }
 add_filter('tiny_mce_before_init', 'ffeeeedd__wysiwyg');
