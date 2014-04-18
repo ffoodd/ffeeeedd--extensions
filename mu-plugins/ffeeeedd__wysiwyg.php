@@ -38,7 +38,7 @@ add_filter( 'mce_external_plugins', 'ffeeeedd__plugins' );
 
 /* == @section Amélioration du WYSIWYG de base ==================== */
 function ffeeeedd__wysiwyg( $boutons ) {
-  $boutons['block_formats'] = 'Paragraphe=p;Titre 2=h2,Titre 3=h3,Titre 4=h4,Pre=pre';
+  $boutons['block_formats'] = 'Paragraphe=p;Titre 2=h2;Titre 3=h3;Titre 4=h4;Pre=pre';
   $boutons['toolbar1'] = 'undo,redo,formatselect,bold,italic,sub,sup,|,bullist,numlist,blockquote,cite,abbr,|,outdent,indent,|,link,unlink,|,|,charmap,|,removeformat,|,wp_fullscreen';
   $boutons['toolbar2'] = '';
   $boutons['paste_as_text'] = true;
