@@ -24,6 +24,7 @@ Version: 18 04 2014
 
 
 /* == @section Création d'une extension personnalisée TinyMCE ====================
+ * @author Tomasz Dziuda
  * @see https://www.gavick.com/magazine/adding-your-own-buttons-in-tinymce-4-editor.html
  */
 function ffeeeedd__plugins() {
