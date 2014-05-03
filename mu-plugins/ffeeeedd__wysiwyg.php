@@ -17,6 +17,8 @@ Version: 18 04 2014
 /* ----------------------------- */
 /*
   == Création d'une extension personnalisée TinyMCE
+    -- Ajouter l’option « Abréviation » à tinyMCE
+    -- Ajouter un bouton « Abréviation »
   == Amélioration du WYSIWYG de base
 */
 
@@ -24,23 +26,28 @@ Version: 18 04 2014
 /* == @section Création d'une extension personnalisée TinyMCE ====================
  * @see https://www.gavick.com/magazine/adding-your-own-buttons-in-tinymce-4-editor.html
  */
-add_action( 'admin_head', 'ffeeeedd__plugins' );
-
 function ffeeeedd__plugins() {
   global $typenow;
-  add_filter( "mce_external_plugins", "ffeeeedd__plugin" );
+  if ( !current_user_can( 'edit_posts' ) && !current_user_can( 'edit_pages' ) ) {
+    return;
+  }
+  add_filter( 'mce_external_plugins', 'ffeeeedd__plugin' );
   add_filter( 'mce_buttons', 'ffeeeedd__button' );
 }
 
+/* -- @subsection Ajouter l’option « Abréviation » à tinyMCE -------------------- */
 function ffeeeedd__plugin( $plugin_array ) {
   $plugin_array['ffeeeedd__plugins'] = content_url( '/mu-plugins/ffeeeedd__wysiwyg/boutons.js' );
   return $plugin_array;
 }
 
+/* -- @subsection Ajouter un bouton « Abréviation » -------------------- */
 function ffeeeedd__button( $bouton ) {
   array_push( $bouton, 'abbr' );
   return $bouton;
 }
+
+add_action( 'admin_head', 'ffeeeedd__plugins' );
 
 
 /* == @section Amélioration du WYSIWYG de base ==================== */
@@ -51,4 +58,5 @@ function ffeeeedd__wysiwyg( $boutons ) {
   $boutons['paste_as_text'] = true;
   return $boutons;
 }
-add_filter('tiny_mce_before_init', 'ffeeeedd__wysiwyg');
+
+add_filter( 'tiny_mce_before_init', 'ffeeeedd__wysiwyg' );
