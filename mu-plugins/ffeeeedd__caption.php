@@ -31,7 +31,7 @@ Version: 28 01 2014
       return $content;
     }
     $content = str_replace( '<img', '<img id="' . $attr['id'] . '" itemprop="contentURL" aria-describedby="wp-caption--' . $attr['id'] . '"', $content );
-    $attributes = ' class="wp-caption inbl pa1 ' . esc_attr( $attr['align'] ) . '"';
+    $attributes = ' class="wp-caption pa1 ' . esc_attr( $attr['align'] ) . '"';
     $output = '<figure' . $attributes .' role="group" itemscope itemtype="http://schema.org/ImageObject">';
     $output .= do_shortcode( $content );
     $output .= '<figcaption class="wp-caption-text pt1 small" id="wp-caption--' . $attr['id'] . '" itemprop="description">' . $attr['caption'] . '</figcaption>';
